@@ -13,7 +13,7 @@ interface bookdetailprop {
 
 const getbooks = async() =>{
 
-    const res = await fetch('http://localhost:3000//booksData.json')
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json` ,{cache : 'no-store'})
 
    const data = await res.json()
 
